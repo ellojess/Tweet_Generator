@@ -3,25 +3,29 @@ import sys as sys
 from python_quote import random_python_quote
 
 '''
-TODO: 
-- fix split words.txt list 
 - test with " python3 rearrange.py how now brown cow "
-- 
+
+- takes words as list in command line
+- split list 
+- shuffle words to a random order 
+- join list 
 '''
 
-sentence = random_python_quote()
+sentence = sys.argv[1:]
+# print(sentence)
 
 def rearrange(sentence):
-    words = sentence.split()
-    random.shuffle(words)
-    new_sentence = ' '.join(words)
-    print(new_sentence)
+    for word in sentence:
+        words = word.split(' ')
+        random.shuffle(words)
+    return ' '.join(words)
+    # print(words)
 
-# rearrange(sentence)
+print(rearrange(sentence))
 
 # get the command line arguments with sys 
-if __name__ == "__main__":
-    print(rearrange(sentence))
-    # args = sys.argv
-    # words = args[1:]
-    # print(words)
+# if __name__ == "__main__":
+#     # args = sys.argv
+#     # words = args[1:]
+#     print(rearrange(sentence))
+#     # print(words)
