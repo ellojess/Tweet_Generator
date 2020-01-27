@@ -2,12 +2,17 @@ import random
 import sys as sys 
 
 '''
+Weird bug found when testing in terminal, ex: 
+$ python3 dictionary_words.py 5
+[first run] only prints out 3 words 
+[second run] prints out 5
+[third run and every run after that] prints out 4 words
 '''
 
 words = open('words.txt', 'r')
 words = words.read().split('\n')
 sentence_len = int(sys.argv[1])
-print(sentence_len)
+# print(sentence_len)
 
 '''
 Select a random set of words from words file and store in a data type
