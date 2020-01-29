@@ -13,13 +13,14 @@ def random_sentence(sentence_len, words):
         sentence += word + " "
     return sentence
 
-# f.close()
-
+'''
+Entry point of program, opens and closes words.txt file for program to use
+Recognizes command line argument with sys.argv[1]
+'''
 if __name__ == "__main__":
     with open('words.txt', 'r') as f:
         words = f.read().split(' ')
-    # print(words)
-    # words = ['orange', 'blue', 'yellow', 'red', 'green', 'pink']
+
     sentence_len = int(sys.argv[1])
     print(sentence_len)
     print(random_sentence(sentence_len, words))
