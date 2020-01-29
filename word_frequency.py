@@ -29,7 +29,7 @@ and returns the total count of unique words in the histogram
 '''
 def unique_words():
     # count word_histogram keys 
-    print(len(word_histogram))
+    print("There are " + str(len(word_histogram)) + " unique words")
 
 '''
 function that takes a word and histogram 
