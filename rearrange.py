@@ -9,12 +9,11 @@ import sys as sys
 - split list 
 - shuffle words to a random order 
 - join list 
-'''
 
-'''
 main function takes words in 
 command line as argument and shuffles words
 '''
+
 # get the command line arguments with sys 
 if __name__ == "__main__":
     words = sys.argv[1:]
