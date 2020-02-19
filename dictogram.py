@@ -1,4 +1,4 @@
-from random import randint
+import random
 
 class Dictogram:
 
@@ -14,25 +14,64 @@ class Dictogram:
 
     def build_dictogram(self): 
         '''Creates a histogram dictionary using the word_list property and returns it'''
+        # histogram = {}
+        # for word in words: 
+        #     histogram[word] = histogram.get(word, 0) + 1
+        # return histogram
 
-        #TODO: use your histogram function as a starting point to complete this method
-        pass
+        histogram = {}
+        for word in self.word_list:
+            histogram[word] = histogram.get(word, 0) + 1
+        return histogram
 
     def frequency(self, word):
         '''returns the frequency or count of the given word in the dictionary histogram'''
-        #TODO: use your frequency function as a starting point to complete this method
-        pass
+        # return histogram.get(word, False)
+
+        return self.dictionary_histogram.get(word, False)
+
 
     def unique_words(self):
-        '''returns the number of unique words in the dictionary histogram'''
-        #TODO: use your unique words function as a starting point to complete this method
-        pass
+        '''returns the number of unique words in the dictionary histogram, ie types'''
+
+        return len(self.dictionary_histogram)
 
     def sample(self):
         '''Randomly samples from the dictionary histogram based on the frequency, returns a word'''
 
         #TODO: use your sample function as a starting point to complete this method 
-        pass
+
+
+        # word_count = 0
+        # # calculate total word count in source text 
+        # word_count += sum(hist[word] for word in hist.keys())
+        # word_range = 0
+        # histogram = {}
+        # random_int = random.random()
+
+        # for key in hist.keys():
+        #     # calculate how often the word/key value appears in source text file 
+        #     histogram[key] = hist[key]/word_count
+        #     # see if word is in that range 
+        #     if random_int > word_range and random_int <= word_range + histogram[key]:
+        #         # return word within range 
+        #         return key
+        #     # change range to decrease liklihood of same word repeating
+        #     word_range += histogram[key]
+
+        # word_count = self.tokens
+        # word_range = 0
+        # random_int = random.random()
+        # hist = self.dictionary_histogram
+        random_value = random.randrange(0, self.tokens)
+        position = 0
+
+        
+        for key in self.dictionary_histogram.keys():
+            position += self.dictionary_histogram[key]
+            
+            if position > random_value:
+                return key
 
 def print_dictogram(word_list):
     '''Creates a dictionary based histogram (dictogram) and then prints out its properties and samples from it'''
