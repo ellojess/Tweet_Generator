@@ -14,23 +14,6 @@ def histogram(words):
         histogram[word] = histogram.get(word, 0) + 1
     return histogram
 
-# def list_histogram(words):
-#     filehandle = open("words.txt", "r")
-#     lines = filehandle.readlines()
-
-#     histogram = []
-#     # check if word is in text file
-#     for word in lines:
-#         # Check if word is in histogram 
-#         for list in histogram:
-#             # Check if word appears
-#             if list[0] == word:
-#                 # add one if word appears
-#                 list[1] += 1
-#         # add the word and '1' to histogram 
-#         histogram.append([word,1])
-#     return histogram
-
 def list_histogram(words):
     '''
     Loop through each pair of words from get_pairs and
@@ -51,7 +34,9 @@ def list_histogram(words):
 # helper function for list_histogram
 def get_pairs(words):
     '''
-    Loop through each word, if 
+    Loop through and track each unique word, and the number of time it appears 
+    increase count every time word appears in list 
+    append word and word count to a list 
     '''
     pairs = []
     i = 0
