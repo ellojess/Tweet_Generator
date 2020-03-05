@@ -77,6 +77,13 @@ class Listogram(list):
             if total > value:
                 return item[0]
 
+    def listogram_samples(self, count):
+        string = ""
+
+        for _ in range(count - 1):
+            string += " " + self.sample()
+        return string
+
 
 
 def print_histogram(word_list):

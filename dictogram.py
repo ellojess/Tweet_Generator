@@ -39,6 +39,13 @@ class Dictogram:
             if position > random_value:
                 return key
 
+    def dictogram_samples(self,count):
+        string = self.sample()
+        
+        for _ in range(count - 1):
+            string += " " + self.sample()
+        return string
+
 def print_dictogram(word_list):
     '''Creates a dictionary based histogram (dictogram) and then prints out its properties and samples from it'''
 
