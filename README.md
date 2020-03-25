@@ -1,3 +1,3 @@
 # Tweet Generator
 
-A random tweet generator using implemented Markov Chain.
+A random tweet generator implemented using Markov Chain
